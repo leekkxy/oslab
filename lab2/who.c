@@ -10,13 +10,7 @@ int sys_iam(const char * name){
 ***/
 	char tmp[25];	//临时数组，暂存用户传来的数据。若数据不符合要求不改变name。
 	int i;		//计数器，循环用
-
-	for(i=0;i<25;i++){
-		tmp[i]=get_fs_byte(name+i);
-		printk("%d",i);
-		if(!tmp[i])
-			break;
-	}
+	for(i=0;i<25&&(tmp[i]=get_fs_byte(name+i));i++);
 	if(i>23||(i==23&&tmp[23])){
 		return -(EINVAL);
 	}
