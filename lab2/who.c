@@ -2,8 +2,8 @@
 #include <asm/segment.h>
 #include<linux/kernel.h>
 
-char  kname[24]="";
-int nbr = -1;
+char  kname[24]="";	//最大24个，因要求23个字符所以数组+1
+int nbr = -1;   	//实际字符指针的最后位置，包括\0字符。-1表示空
 
 int sys_iam(const char * name){
 /***
