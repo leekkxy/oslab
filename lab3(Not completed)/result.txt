@@ -1,0 +1,7 @@
+(Unit: tick)
+Process   Turnaround   Waiting   CPU Burst   I/O Burst
+      0          150         0         150           0
+      1            4         0           3           0
+      3            4         2           0           0
+Average:       52.67      0.67
+Throughout: 1.40/s
